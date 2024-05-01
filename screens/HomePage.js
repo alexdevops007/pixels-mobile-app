@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#ffffff",
-    fontSize: 25,
-    fontFamily: "Roboto-Bold",
+    fontSize: 40,
+    fontFamily: "Roboto-Light",
   },
 });
