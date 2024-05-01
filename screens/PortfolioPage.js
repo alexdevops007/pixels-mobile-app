@@ -1,15 +1,22 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Button, StyleSheet, Text, View } from "react-native";
+import { useEffect } from "react";
 
-const PortfolioPage = () => {
+const PortfolioPage = ({ navigation }) => {
+  useEffect(() => {
+    return () => {
+      console.log("Composant Portfolio demonté");
+    };
+  }, []);
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Portfolio</Text>
+      <Button title="Vers Photo" onPress={() => navigation.navigate("Photo")} />
     </View>
   );
-}
+};
 
-export default PortfolioPage
+export default PortfolioPage;
 
 const styles = StyleSheet.create({
   container: {

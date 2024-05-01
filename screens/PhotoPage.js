@@ -1,15 +1,27 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Button, StyleSheet, Text, View } from "react-native";
+import { useEffect } from "react";
 
-const PhotoPage = () => {
+const PhotoPage = ({ navigation }) => {
+  useEffect(() => {
+    return () => {
+      console.log("Composants demontés");
+    };
+  }, []);
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Photo</Text>
+      <Button title="Vers Home" onPress={() => navigation.popToTop()} />
+
+      {/* <Button
+        title="Vers Home"
+        onPress={() => navigation.navigate("Home")}
+      /> */}
     </View>
   );
-}
+};
 
-export default PhotoPage
+export default PhotoPage;
 
 const styles = StyleSheet.create({
   container: {

@@ -1,9 +1,15 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 
-const HomePage = () => {
+const HomePage = ({ navigation }) => {
+  const handlePress = () => {
+    navigation.navigate('Portfolio')
+    // navigation.push("Portfolio");
+  };
+
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>HomePage</Text>
+      <Text style={styles.text}>Home</Text>
+      <Button title="Vers Portfolio" onPress={handlePress} />
     </View>
   );
 };
